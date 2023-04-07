@@ -133,3 +133,4 @@ regenerate mkinitcpio `mkinitcpio -P`
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB  
 grub-mkconfig -o /boot/grub/grub.cfg  
 ```
+ressources: https://github.com/Szwendacz99/Arch-install-encrypted-btrfs
