@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#####################################################
+#
+# Author: Dvorhack
+#
+# Goal: This script allow you to toggle keyboard 
+#       backlight on an asus gaming laptop
+#
+#####################################################
+
+if [ -z "$1" ];then
+    echo "Usage $0 <up|down>"
+    exit -1
+fi
+
+current=`asusctl -k |cut -d' ' -f5`
+
+if [ "$1" == "up" ];then
+    echo "Go to $((current+1))"
+    case $current in
+        0)
+            asusctl -k low
+        ;;
+        1)
+            asusctl -k med
+        ;;
+        2)
+            asusctl -k high
+        ;;
+    esac
+elif [ "$1" == "down" ];then
+    echo "Go to $((current-1))"
+    case $current in
+        1)
+            asusctl -k off
+        ;;
+        2)
+            asusctl -k low
+        ;;
+        3)
+            asusctl -k med
+        ;;
+    esac
+fi%    

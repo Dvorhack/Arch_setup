@@ -1,4 +1,4 @@
-# Arch Linux on Asus ROG Zephyrus G14 (G401II)
+# Arch Linux on Asus ROG 
 My own notes installing Arch Linux with btrfs, disc encryption, auto-snapshots, no-noise fan-curves on my Asus ROG ROG
 
 
@@ -378,7 +378,7 @@ Reboot after install.
 ## Tweaks
 
 ### Add Custom Repo from [Luke Jones](https://asus-linux.org/) and install some tools
-This part is need only for people with Asus gaming laptops (rog, zephyrus, ...)
+This part is needed only for people with Asus gaming laptops (rog, zephyrus, ...)
 
 #### Add G14 Repository
 
@@ -400,7 +400,7 @@ sudo sed -i 's/vmlinuz-linux/vmlinuz-linux-g14/' /boot/loader/entries/arch_g14.c
 sudo sed -i 's/initramfs-linux/initramfs-linux-g14/' /boot/loader/entries/arch_g14.conf
 ```
 
-If you want the autosnap to save the G14 enironment, youneed to modify `autosnap` accordingly.
+If you want the autosnap to save the G14 environment, youneed to modify `autosnap` accordingly.
 
 Reboot now!
 
